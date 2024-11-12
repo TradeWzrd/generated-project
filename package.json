@@ -1,0 +1,14 @@
+{
+      "name": "server-dashboard",
+      "version": "1.0.0",
+      "scripts": {
+        "dev": "vite"
+      },
+      "dependencies": {
+        "express": "^4.18.2",
+        "ws": "^8.13.0"
+      },
+      "devDependencies": {
+        "vite": "^4.2.0"
+      }
+    }

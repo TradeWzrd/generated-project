@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Server Dashboard</title>
+      <style>
+        /* Add your custom styles here */
+      </style>
+    </head>
+    <body>
+      <h1>Server Dashboard</h1>
+      <div id="logs"></div>
+
+      <script>
+        const logs = document.getElementById('logs');
+        const ws = new WebSocket('ws://localhost:3000');
+
+        ws.addEventListener('message', (event) => {
+          const log = document.createElement('p');
+          log.textContent = event.data;
+          logs.appendChild(log);
+        });
+      </script>
+    </body>
+    </html>
